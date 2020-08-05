@@ -182,6 +182,21 @@ body {
   text-align: center;
   padding: 2.5rem; }
 
+.galary {
+  display: flex; }
+  .galary__photo {
+    width: 100%;
+    display: block; }
+
+.overviwe {
+  display: flex; }
+  .overviwe__stars {
+    margin-right: auto; }
+  .overviwe__icon, .overviwe__star {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary-dark); }
+
 .container {
   margin: 8rem auto;
   max-width: 120rem;
@@ -211,5 +226,4 @@ body {
 
 .main-view {
   flex: 1;
-  background-color: red;
   height: 50rem; }
