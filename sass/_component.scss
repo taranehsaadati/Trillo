@@ -91,16 +91,14 @@
         justify-content: center;
         align-items: center;
     }
-    &__user {
-    }
+  
     &__photo {
         height: 3.75rem;
         width: 3.75;
         border-radius: 50%;
         margin-right: 0.5rem;
     }
-    &__user-name {
-    }
+   
 }
 
 ////////////////////////////////////////side-nav
@@ -182,7 +180,7 @@
 .overviwe {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-Gray-light-2);
+    border-bottom:  var(--line);
 
     &__title {
         font-size: 2.25rem;
@@ -204,7 +202,7 @@
         margin-right:.5rem;
     }
     &__location {
-        font-size:1.2rem;
+        font-size:1.6rem;
         display:flex;
         vertical-align:center;
         margin-right:3rem;

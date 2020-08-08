@@ -26,7 +26,10 @@ Gray dark 1:#999;
   --color-Gray-dark-1:#333;
   --color-Gray-dark-2:#777;
   --color-Gray-dark-3:#999;
-  --shadow-dark:0rem 2rem 6rem rgba(0,0,0,.3); }
+  --shadow-dark:0rem 2rem 6rem rgba(0,0,0,.3);
+  --line:1 solid var(--color-Gray-light-2);
+  --shadow-light:0 2rem 5rem rgba(0,0,0,.06)
+; }
 
 * {
   padding: 0;
@@ -54,6 +57,53 @@ body {
 @font-face {
   font-family: "gandom";
   src: url(../gandom/Gandom.woff); }
+
+.container {
+  margin: 8rem auto;
+  max-width: 120rem;
+  width: 120rem;
+  min-height: 50rem;
+  background-color: var(--color-Gray-light-1);
+  box-shadow: var(--shadow-dark); }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  flex: 0 0 18%;
+  background-color: var(--color-Gray-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.main-view {
+  flex: 1; }
+
+.detalis {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-Gray-light-2);
+  border-bottom: var(--line); }
+
+.description {
+  background-color: #fff;
+  box-shadow: --shadow-light;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  font-size: 1.4rem; }
+
+.reviwe {
+  background-color: yellow;
+  flex: 1; }
 
 .logo {
   height: 3.25rem;
@@ -191,7 +241,7 @@ body {
 .overviwe {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-Gray-light-2); }
+  border-bottom: var(--line); }
   .overviwe__title {
     font-size: 2.25rem;
     font-weight: 300;
@@ -207,7 +257,7 @@ body {
   .overviwe__icon {
     margin-right: .5rem; }
   .overviwe__location {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     display: flex;
     vertical-align: center;
     margin-right: 3rem; }
@@ -253,34 +303,3 @@ body {
   100% {
     transform: scale(1);
     box-shadow: none; } }
-
-.container {
-  margin: 8rem auto;
-  max-width: 120rem;
-  width: 120rem;
-  min-height: 50rem;
-  background-color: var(--color-Gray-light-1);
-  box-shadow: var(--shadow-dark); }
-
-.header {
-  height: 7rem;
-  background-color: #fff;
-  border-bottom: 1px solid var(--color-Gray-light-2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.4rem; }
-
-.content {
-  display: flex; }
-
-.sidebar {
-  flex: 0 0 18%;
-  background-color: var(--color-Gray-dark-1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.main-view {
-  flex: 1;
-  height: 50rem; }
