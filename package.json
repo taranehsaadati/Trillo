@@ -10,11 +10,16 @@
     "start":"npm-run-all --parallel devserver watch:sass",
 
 
-    "autoprefix:css":"  postcss  --use autoprefixer -b \"last 10 old  versions\" css/style.comp.css -o css/style.prefix.css",
+    "autoprefix:css":"postcss  --use autoprefixer -b \"last 10 version\" css/style.comp.css -o css/style.prefix.css",
     "compress:css":"node-sass css/style.prefix.css  css/style.css --output-style compressed",
     "build-process":"npm-run-all  compile:sass autoprefix:css compress:css"
 
   },
+  "browserslist": [
+    "last 10 version",
+    "> 1%",
+    "IE 10"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
