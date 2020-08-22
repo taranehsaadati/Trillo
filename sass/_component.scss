@@ -78,15 +78,14 @@
             width: 100%;
             border-radius: 0;
             margin-right: 0;
-            
         }
         &:focus {
             outline: none;
             width: 100%;
             background-color: var(--color-Gray-light-3);
-        @media only screen and(max-width:$bp-smallest) {
-            background-color:unset;
-        }
+            @media only screen and(max-width:$bp-smallest) {
+                background-color: unset;
+            }
         }
         &::-webkit-input-placeholder {
             color: var(--color-Gray-light-4);
@@ -216,8 +215,8 @@
     &__icon-box:hover &__meno {
         visibility: unset;
         top: 10rem;
-        width:15rem;
-        font-size:1rem;
+        width: 15rem;
+        font-size: 1rem;
         z-index: 100;
         background-color: white;
     }
@@ -319,7 +318,7 @@
         align-items: center;
         position: relative;
         z-index: 10;
-        text-align:center;
+        text-align: center;
         @media only screen and(max-width:$bp-small) {
             flex-direction: column;
             align-items: center;
@@ -363,29 +362,59 @@
 ////////////////////////////////////////galary
 .galary {
     display: flex;
+    &__main {
+    }
     &__photo {
         width: 100%;
-        display:block;
-        // position:relative;
+        display: block;
     }
-    &__main{
-        display:flex;
-        flex-direction: column;
+    &__item {
+        position: relative;
     }
-    &__caption{
-        position:absolute;
-        font-size:1.3rem;
-        color:white;
-        z-index:30;
-        // top:50%;
-        // left:50%;
-        // transform:translate(- 50%,- 50%);
-        // border-radius:4rem;
-        padding:1rem 2rem;
-        background-image:linear-gradient(to left top,rgba(white,.5),rgba(red,.5));
-        filter:blur(50%);
+
+    &__caption {
+        visibility: hidden;
+        transition:all .7s cubic-bezier(0, 0.65, 0.72, 1.43);
+        opacity: 0;
+        width: 100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color:#fff;
+        top: 0;
+        font-size: 2rem;
+        font-weight: 300;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        padding: 1rem ;
+        text-align:center;
+        @media only screen and(max-width:$bp-smallest){
+            font-size:1.2rem;
+            padding:0;
+        }
+    }
+    &__caption-1{
+        background-image: linear-gradient(to left top, rgba(rgb(247, 187, 120), .3), rgba(rgb(39, 14, 2), .9));
+    }
+    &__caption-2{
+        background-image: linear-gradient(to left top, rgba(#f9f9fd, .3), rgba(rgb(6, 3, 12), .9));
+    }
+    &__caption-3{
+        background-image: linear-gradient(to left top, rgba(rgb(247, 187, 120), .3), rgba(rgb(161, 83, 47), .9));
+    }
+
+    &__item:hover &__caption {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__item:hover &__photo{
+        filter:blur(90%);
     }
 }
+
 
 ////////////////////////////////////////overviwe
 .overviwe {
